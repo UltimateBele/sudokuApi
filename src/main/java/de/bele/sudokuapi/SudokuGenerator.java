@@ -2,7 +2,6 @@ package de.bele.sudokuapi;
 
 import org.springframework.stereotype.Service;
 
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 @Service
@@ -103,7 +102,7 @@ public class SudokuGenerator {
     // Fisher-Yates shuffle
     private void shuffleArray(int[] arr)
     {
-        Random random = ThreadLocalRandom.current();
+        ThreadLocalRandom random = ThreadLocalRandom.current();
         for (int i = arr.length - 1; i > 0; i--)
         {
             int index = random.nextInt(i + 1);
